@@ -15,6 +15,7 @@
 ### Packages
 
 * vue
+* vuex
 * vue-router
 * bulma
 * axios
@@ -38,6 +39,10 @@ npm run build
 ### Documentation
 
 For documentation visit the repo's [wiki](https://github.com/setholito/charcoal/wiki).
+
+### Contribute
+
+I am not a Vue.js expert. I'm always looking to learn and improve. With that being said I'd love to get some help from other developers. If you see something that could be done smarter, make a pull request. If you have an addition you'd like to bring in, make a pull request...I think you get the picture 😎.
 
 ### Donate
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="field is-grouped">
+    <div class="buttons has-addons">
         <slot></slot>
     </div>
 </template>

@@ -58,25 +58,25 @@ export default {
     computed: {
         isFailure() {
             return this.res.status === 400
-                || this.res.status === 401;
+                || this.res.status === 401
         },
         isSuccessful() {
             return this.res.status === 200
-                || this.res.status === 201;
+                || this.res.status === 201
         }
     },
     methods: {
         dismissNotification() {
-            this.isVisible = false;
+            this.isVisible = false
         },
         submitForm() {
             this.$http.post(this.url, this.payload)
                 .then(res => {
-                    this.res = res;
+                    this.res = res
                 })
                 .catch(err => {
-                    this.err = err;
-                });
+                    this.err = err
+                })
         }
     }
 }

@@ -1,7 +1,7 @@
 export const increment = ({ commit }, payload) => {
-    commit('increment');
+    commit('increment')
 }
 
 export const decrement = ({ commit }, payload) => {
-    commit('decrement');
+    commit('decrement')
 }

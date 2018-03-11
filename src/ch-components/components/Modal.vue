@@ -40,11 +40,11 @@ export default {
     },
     methods: {
         primaryClick() {
-            this.$emit('primaryClickModal');
-            this.$emit('closeModal');
+            this.$emit('primaryClickModal')
+            this.$emit('closeModal')
         },
         closeClick() {
-            this.$emit('closeModal');
+            this.$emit('closeModal')
         }
     }
 }

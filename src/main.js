@@ -4,7 +4,7 @@ import App from './App.vue'
 import axios from 'axios'
 
 import { routes } from './routes'
-import { store } from './store/store';
+import { store } from './store/store'
 
 // Convenience item - this.$http
 Vue.prototype.$http = axios

@@ -43,7 +43,7 @@ export default {
     },
     methods: {
         toggleMenu() {
-            this.isActive['is-active'] = !this.isActive['is-active'];
+            this.isActive['is-active'] = !this.isActive['is-active']
         }
     }
 }

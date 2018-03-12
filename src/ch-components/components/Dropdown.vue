@@ -45,7 +45,7 @@ export default {
     },
     methods: {
         openDropdown() {
-            this.$emit('openDropdown');
+            this.$emit('openDropdown')
         }
     }
 }

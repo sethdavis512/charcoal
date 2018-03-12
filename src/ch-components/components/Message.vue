@@ -19,7 +19,7 @@
 export default {
     methods: {
         closeMessage() {
-            this.$emit('closeMessage');
+            this.$emit('closeMessage')
         }
     }
 }

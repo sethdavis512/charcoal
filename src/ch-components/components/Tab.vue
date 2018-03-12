@@ -17,7 +17,7 @@ export default {
         }
     },
     created() {
-        this.isActive = this.active;
+        this.isActive = this.active
     },
     data() {
         return {

@@ -15,12 +15,14 @@
     "lodash": "^4.17.4",
     "moment": "^2.20.1",
     "vue": "^2.5.13",
-    "vue-router": "^2.8.1"
+    "vue-router": "^2.8.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^6.0.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",

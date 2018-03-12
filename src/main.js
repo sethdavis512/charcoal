@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import App from './App.vue'
-import { routes } from './routes'
 import axios from 'axios'
+
+import { routes } from './routes'
+import { store } from './store/store'
 
 // Convenience item - this.$http
 Vue.prototype.$http = axios
@@ -18,5 +20,6 @@ const router = new Router({
 new Vue({
     el: '#app',
     render: h => h(App),
-    router
+    router,
+    store
 })

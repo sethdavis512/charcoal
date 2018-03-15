@@ -6,10 +6,10 @@
         <div class="control">
             <input
                 :placeholder="placeholder"
+                :type="type"
                 :value="value"
                 @input="handleInput($event.target.value)"
                 class="input"
-                type="text"
             />
         </div>
         <p
@@ -35,6 +35,10 @@ export default {
         placeholder: {
             type: String,
             default: 'Enter text'
+        },
+        type: {
+            type: String,
+            default: 'text'
         },
         value: {
             type: String

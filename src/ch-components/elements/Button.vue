@@ -1,5 +1,8 @@
 <template>
-    <button class="button">
+    <button
+        class="button"
+        type="button"
+    >
         {{ text }}
     </button>
 </template>
@@ -9,8 +12,8 @@
 export default {
     props: {
         text: {
-            type: String,
-            required: true
+            default: 'Submit',
+            type: String
         }
     }
 }

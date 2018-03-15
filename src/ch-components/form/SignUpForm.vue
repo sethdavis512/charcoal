@@ -22,6 +22,7 @@
             <ch-input
                 label="Email"
                 placeholder="Enter your email"
+                type="email"
                 v-model="user.email"
             >
             </ch-input>

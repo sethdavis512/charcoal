@@ -14,9 +14,7 @@
         >
             {{ failureMsg }}
         </ch-notification>
-        <form
-            @submit.prevent="submitForm"
-        >
+        <form @submit.prevent="submitForm">
             <slot></slot>
         </form>
     </div>

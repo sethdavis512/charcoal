@@ -1,37 +1,39 @@
 <template>
-    <ch-box class="login-form-container">
-        <h3 class="title is-3">
+    <div class="login-form">
+        <h1 class="title is-1">
             Login
-        </h3>
-        <ch-form
-            :payload="user"
-            :url="resource"
-        >
-            <ch-input
-                label="Email"
-                placeholder="Enter your email"
-                type="email"
-                v-model="user.email"
+        </h1>
+        <ch-box>
+            <ch-form
+                :payload="user"
+                :url="resource"
             >
-            </ch-input>
-            <ch-input
-                label="Password"
-                placeholder="Enter your password"
-                type="password"
-                v-model="user.password"
-            >
-            </ch-input>
-            <ch-button
-                class="is-danger"
-                type="submit"
-            >
-            </ch-button>
-        </ch-form>
-        <hr>
-        <p>
-            Not a member? <router-link to="/sign-up">Sign Up</router-link>
-        </p>
-    </ch-box>
+                <ch-input
+                    label="Email"
+                    placeholder="Enter your email"
+                    type="email"
+                    v-model="user.email"
+                >
+                </ch-input>
+                <ch-input
+                    label="Password"
+                    placeholder="Enter your password"
+                    type="password"
+                    v-model="user.password"
+                >
+                </ch-input>
+                <ch-button
+                    class="is-danger"
+                    type="submit"
+                >
+                </ch-button>
+            </ch-form>
+            <hr>
+            <p>
+                Not a member? <router-link to="/sign-up">Sign Up</router-link>
+            </p>
+        </ch-box>
+    </div>
 </template>
 
 <script>
@@ -63,7 +65,7 @@ export default {
 
 <style lang="scss">
 
-.login-form-container {
+.login-form {
     margin: 1em;
 }
 

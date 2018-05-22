@@ -1,52 +1,54 @@
 <template>
-    <ch-box class="sign-up-form-container">
-        <h3 class="title is-3">
+    <div class="sign-up-form">
+        <h1 class="title is-1">
             Sign Up
-        </h3>
-        <ch-form
-            :payload="user"
-            :url="resource"
-        >
-            <ch-input
-                label="First Name"
-                placeholder="Enter your first name"
-                v-model="user.firstName"
+        </h1>
+        <ch-box>
+            <ch-form
+                :payload="user"
+                :url="resource"
             >
-            </ch-input>
-            <ch-input
-                label="Last Name"
-                placeholder="Enter your last name"
-                v-model="user.lastName"
-            >
-            </ch-input>
-            <ch-input
-                label="Email"
-                placeholder="Enter your email"
-                type="email"
-                v-model="user.email"
-            >
-            </ch-input>
-            <ch-input
-                label="Password"
-                placeholder="Enter your password"
-                type="password"
-                v-model="user.password"
-            >
-            </ch-input>
-            <ch-input
-                label="Confirm Password"
-                placeholder="Confirm your password"
-                type="password"
-                v-model="user.confirmPassword"
-            >
-            </ch-input>
-            <ch-button
-                class="is-danger"
-                type="submit"
-            >
-            </ch-button>
-        </ch-form>
-    </ch-box>
+                <ch-input
+                    label="First Name"
+                    placeholder="Enter your first name"
+                    v-model="user.firstName"
+                >
+                </ch-input>
+                <ch-input
+                    label="Last Name"
+                    placeholder="Enter your last name"
+                    v-model="user.lastName"
+                >
+                </ch-input>
+                <ch-input
+                    label="Email"
+                    placeholder="Enter your email"
+                    type="email"
+                    v-model="user.email"
+                >
+                </ch-input>
+                <ch-input
+                    label="Password"
+                    placeholder="Enter your password"
+                    type="password"
+                    v-model="user.password"
+                >
+                </ch-input>
+                <ch-input
+                    label="Confirm Password"
+                    placeholder="Confirm your password"
+                    type="password"
+                    v-model="user.confirmPassword"
+                >
+                </ch-input>
+                <ch-button
+                    class="is-danger"
+                    type="submit"
+                >
+                </ch-button>
+            </ch-form>
+        </ch-box>
+    </div>
 </template>
 
 <script>
@@ -81,7 +83,7 @@ export default {
 
 <style lang="scss">
 
-.sign-up-form-container {
+.sign-up-form {
     margin: 1em;
 }
 

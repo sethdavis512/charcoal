@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 import Container from './Container.vue'
 
 export default {
@@ -17,7 +16,14 @@ export default {
         Container
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+footer.footer {
+    color: $grey;
+
+    a {
+        color: $white;
+    }
+}
+</style>

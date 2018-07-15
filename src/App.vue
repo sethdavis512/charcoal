@@ -14,36 +14,30 @@
 </template>
 
 <script>
-
-import ChHeader from './partials/Header.vue'
-import ChFooter from './partials/Footer.vue'
+import ChHeader from './partials/Header.vue';
+import ChFooter from './partials/Footer.vue';
 
 export default {
     components: {
         ChHeader,
         ChFooter
     }
-}
-
+};
 </script>
 
 <style lang="scss">
-
 // https://bulma.io/documentation/overview/customize/
-@import "../node_modules/bulma/sass/utilities/initial-variables.sass";
-@import "../node_modules/bulma/sass/utilities/functions.sass";
+@import '../node_modules/bulma/sass/utilities/initial-variables.sass';
+@import '../node_modules/bulma/sass/utilities/functions.sass';
 
 // Theme Variables
-@import "./scss/theme";
+@import './scss/theme';
 
 // Transitions
-@import "./scss/transitions";
+@import './scss/transitions';
 
 // Import the rest of Bulma
-@import "../node_modules/bulma/bulma.sass";
-
-// Font Awesome
-@import "../node_modules/font-awesome/css/font-awesome.css";
+@import '../node_modules/bulma/bulma.sass';
 
 // Page styling
 html,
@@ -57,5 +51,4 @@ body,
     flex-direction: column;
     justify-content: space-between;
 }
-
 </style>

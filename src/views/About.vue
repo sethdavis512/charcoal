@@ -53,7 +53,7 @@
             >
             </ch-button>
             <span class="button">
-                {{ counter }}
+                {{ count }}
             </span>
             <ch-button
                 @click.native="increment"
@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 import ChButton from '../ch-components/elements/Button.vue'
 import ChButtonGroup from '../ch-components/elements/ButtonGroup.vue'
@@ -78,7 +78,7 @@ export default {
         ChSection
     },
     computed: {
-        ...mapGetters(['counter'])
+        ...mapGetters(['count'])
     },
     methods: {
         ...mapActions(['decrement', 'increment'])

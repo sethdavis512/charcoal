@@ -1,5 +1,5 @@
 <template>
-    <section class="hero">
+    <section class="hero" :style="{background: `url(${bgImgUrl}) no-repeat center center fixed`, backgroundSize: 'cover'}">
         <div class="hero-body">
             <div class="container">
                 <slot></slot>
@@ -8,6 +8,15 @@
     </section>
 </template>
 
-<script></script>
+<script>
+export default {
+    props: {
+        bgImgUrl: {
+            type: String
+        }
+    }
+}
+</script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

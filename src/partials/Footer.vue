@@ -1,7 +1,7 @@
 <template>
     <ch-footer>
         <p>
-            <a href="https://www.github.com/setholito/charcoal"><strong>Charcoal</strong></a> by <a href="https://setholito.github.io">Seth Davis</a>.
+            <a href="https://www.github.com/setholito/charcoal"><strong>Charcoal</strong></a> by <a href="http://www.sethdavisdesign.com/">Seth Davis</a>.
         </p>
     </ch-footer>
 </template>

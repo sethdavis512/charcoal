@@ -5,38 +5,34 @@
             slot="navbar-brand"
             to="/"
         >
-            <span class="icon">
-                <i class="fa fa-home"></i>
-            </span>
+            <font-awesome-icon icon="home" />
+            Home
         </router-link>
         <router-link
+            active-class="is-active"
             class="navbar-item"
             slot="navbar-end"
             to="/about"
         >
-            <span class="icon">
-                <i class="fa fa-book"></i>
-            </span>
+            <font-awesome-icon icon="book" />
             About
         </router-link>
         <router-link
+            active-class="is-active"
             class="navbar-item"
             slot="navbar-end"
             to="/sign-up"
         >
-            <span class="icon">
-                <i class="fa fa-pencil"></i>
-            </span>
+            <font-awesome-icon icon="pencil-alt" />
             Sign Up
         </router-link>
         <router-link
+            active-class="is-active"
             class="navbar-item"
             slot="navbar-end"
             to="/login"
         >
-            <span class="icon">
-                <i class="fa fa-user-circle-o"></i>
-            </span>
+            <font-awesome-icon icon="sign-in-alt" />
             Login
         </router-link>
     </ch-navbar>
@@ -54,4 +50,14 @@ export default {
 
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+.navbar-brand,
+.navbar-start,
+.navbar-end {
+    svg.svg-inline--fa {
+        margin-right: .5em;
+    }
+}
+
+</style>

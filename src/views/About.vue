@@ -3,17 +3,47 @@
         <h1 class="title is-1">
             About
         </h1>
-        <p>
-            Charcoal is a simple starter template using the Vue CLI <code>webpack-simple</code> and styled with <code>Bulma</code>.
+        <p class="spacer-bottom">
+            Charcoal is a simple starter template using the new
+            <code>Vue CLI 3.0</code> and styled with <code>Bulma</code>.
         </p>
-        <p class="spaced">
-            Feel free to create pull requests or fork it for yourself.
+        <p class="content">
+            Included packages:
+            <ul>
+                <li>
+                    Vue
+                </li>
+                <li>
+                    Vuex
+                </li>
+                <li>
+                    Vue Router
+                </li>
+                <li>
+                    Bulma
+                </li>
+                <li>
+                    Axios
+                </li>
+                <li>
+                    Lodash
+                </li>
+                <li>
+                    Moment
+                </li>
+                <li>
+                    Jest
+                </li>
+                <li>
+                    Font Awesome 5
+                </li>
+            </ul>
         </p>
         <hr>
         <h3 class="title is-3">
             Vuex
         </h3>
-        <p class="spaced">
+        <p class="spacer-bottom">
             Charcoal comes with Vuex baked right in.
         </p>
         <ch-button-group>
@@ -35,7 +65,6 @@
 </template>
 
 <script>
-
 import { mapGetters, mapActions } from 'vuex'
 
 import ChButton from '../ch-components/elements/Button.vue'
@@ -49,24 +78,16 @@ export default {
         ChSection
     },
     computed: {
-        ...mapGetters([
-            'counter'
-        ])
+        ...mapGetters(['counter'])
     },
     methods: {
-        ...mapActions([
-            'decrement',
-            'increment'
-        ])
+        ...mapActions(['decrement', 'increment'])
     }
 }
-
 </script>
 
 <style lang="scss">
-
-p.spaced {
-    margin-bottom: 2rem;
+p.spacer-bottom {
+    margin-bottom: 1.5em;
 }
-
 </style>

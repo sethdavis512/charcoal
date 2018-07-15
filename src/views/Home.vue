@@ -1,5 +1,9 @@
 <template>
-    <ch-hero class="is-danger is-bold is-medium has-text-centered">
+    <!-- Photo by Magnus S on Unsplash -->
+    <ch-hero
+        class="is-danger is-bold is-large has-text-centered"
+        bg-img-url="https://res.cloudinary.com/setholito/image/upload/v1531689610/charcoal/charcoal-background.jpg"
+    >
         <img
             src="../assets/charcoal-logo.svg"
             width="150"
@@ -14,7 +18,6 @@
 </template>
 
 <script>
-
 import ChHero from '../ch-components/layout/Hero.vue'
 
 export default {
@@ -28,7 +31,7 @@ export default {
         ChHero
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

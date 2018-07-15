@@ -1,39 +1,57 @@
 <p align="center">
-    <br>
-    <img width="200" src="https://raw.githubusercontent.com/setholito/charcoal/master/src/assets/charcoal-logo.png" alt="Charcoal Logo">
-    <br>
+    <img
+        width="200" src="https://raw.githubusercontent.com/setholito/charcoal/master/src/assets/charcoal-logo.png"
+        alt="Charcoal Logo"
+    >
 </p>
 
 # Charcoal
 
 ### Fuel for Web Apps
 
-> A starter template using the [Vue](http://vuejs.org/) CLI webpack-simple and styled with [Bulma](http://bulma.io/).
+> A starter template using the [Vue](http://vuejs.org/) CLI 3.0 and styled with [Bulma](http://bulma.io/).
 
-<img src="https://res.cloudinary.com/setholito/image/upload/v1518378200/charcoal/charcoal-sample.png" />
+<img src="https://res.cloudinary.com/setholito/image/upload/v1531689929/charcoal/charcoal-example.jpg" />
 
 ### Packages
 
-* vue
-* vuex
-* vue-router
-* bulma
-* axios
-* font-awesome
-* lodash
-* moment
+-   Vue
+-   Vuex
+-   Vue-router
+-   Bulma
+-   Axios
+-   Font Awesome 5
+-   Lodash
+-   Moment
 
-### Build Setup
+### Project setup
 
-``` bash
-# install dependencies
+```
 npm install
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Compiles and hot-reloads for development
 
-# build for production with minification
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+
+```
 npm run build
+```
+
+### Lints and fixes files
+
+```
+npm run lint
+```
+
+### Run your unit tests
+
+```
+npm run test:unit
 ```
 
 ### Documentation
@@ -42,7 +60,7 @@ For documentation visit the repo's [wiki](https://github.com/setholito/charcoal/
 
 ### Contribute
 
-I am not a Vue.js expert. I'm always looking to learn and improve. With that being said I'd love to get some help from other developers. If you see something that could be done smarter, make a pull request. If you have an addition you'd like to bring in, make a pull request...I think you get the picture 😎.
+I'm always looking to learn and improve. With that being said I'd love to get some help from the Vue community. Please feel free to make a pull request and contribute as much as you'd like - Thanks!
 
 ### Donate
 

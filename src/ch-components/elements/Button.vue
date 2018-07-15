@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         text: {
@@ -17,7 +16,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

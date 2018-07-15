@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         progress: {
@@ -19,7 +18,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

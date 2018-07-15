@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         iconName: {
@@ -13,7 +12,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

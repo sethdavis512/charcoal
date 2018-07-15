@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 export default {
     methods: {
         dismiss() {
@@ -18,7 +17,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 export default {
     model: {
         prop: 'modelValue',
@@ -69,13 +68,10 @@ export default {
         }
     }
 }
-
 </script>
 
 <style lang="scss">
-
 label {
     cursor: pointer;
 }
-
 </style>

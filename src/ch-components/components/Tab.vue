@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         name: {
@@ -25,7 +24,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

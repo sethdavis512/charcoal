@@ -22,7 +22,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         helperText: {
@@ -50,7 +49,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

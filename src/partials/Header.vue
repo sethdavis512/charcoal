@@ -39,7 +39,6 @@
 </template>
 
 <script>
-
 import ChNavbar from '../ch-components/components/Navbar.vue'
 
 export default {
@@ -47,17 +46,14 @@ export default {
         ChNavbar
     }
 }
-
 </script>
 
 <style lang="scss">
-
 .navbar-brand,
 .navbar-start,
 .navbar-end {
     svg.svg-inline--fa {
-        margin-right: .5em;
+        margin-right: 0.5em;
     }
 }
-
 </style>

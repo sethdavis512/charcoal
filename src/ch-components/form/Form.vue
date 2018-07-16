@@ -21,7 +21,6 @@
 </template>
 
 <script>
-
 import ChNotification from '../elements/Notification.vue'
 
 export default {
@@ -55,12 +54,10 @@ export default {
     },
     computed: {
         isFailure() {
-            return this.res.status === 400
-                || this.res.status === 401
+            return this.res.status === 400 || this.res.status === 401
         },
         isSuccessful() {
-            return this.res.status === 200
-                || this.res.status === 201
+            return this.res.status === 200 || this.res.status === 201
         }
     },
     methods: {
@@ -68,7 +65,8 @@ export default {
             this.isVisible = false
         },
         submitForm() {
-            this.$http.post(this.url, this.payload)
+            this.$http
+                .post(this.url, this.payload)
                 .then(res => {
                     this.res = res
                 })
@@ -80,4 +78,5 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

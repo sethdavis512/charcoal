@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 export default {
     model: {
         event: 'change'
@@ -40,7 +39,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

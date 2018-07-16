@@ -15,7 +15,6 @@
 </template>
 
 <script>
-
 export default {
     methods: {
         closeMessage() {
@@ -23,7 +22,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

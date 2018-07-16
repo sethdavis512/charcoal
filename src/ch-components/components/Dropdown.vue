@@ -35,7 +35,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         isOpen: {
@@ -49,7 +48,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

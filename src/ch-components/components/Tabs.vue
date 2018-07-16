@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         modifier: {
@@ -43,7 +42,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

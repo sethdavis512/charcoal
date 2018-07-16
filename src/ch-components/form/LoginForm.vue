@@ -37,7 +37,6 @@
 </template>
 
 <script>
-
 import ChBox from '../elements/Box.vue'
 import ChButton from '../elements/Button.vue'
 import ChForm from './Form.vue'
@@ -60,11 +59,9 @@ export default {
         }
     }
 }
-
 </script>
 
 <style lang="scss">
-
 .login-form {
     margin: 1em;
 }
@@ -74,5 +71,4 @@ export default {
         margin: 3em 0;
     }
 }
-
 </style>

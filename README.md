@@ -17,7 +17,7 @@
 
 -   Vue
 -   Vuex
--   Vue-router
+-   Vue Router
 -   Bulma
 -   Axios
 -   Font Awesome 5

@@ -14,15 +14,15 @@
 </template>
 
 <script>
-import ChHeader from './partials/Header.vue';
-import ChFooter from './partials/Footer.vue';
+import ChHeader from './partials/Header.vue'
+import ChFooter from './partials/Footer.vue'
 
 export default {
     components: {
         ChHeader,
         ChFooter
     }
-};
+}
 </script>
 
 <style lang="scss">

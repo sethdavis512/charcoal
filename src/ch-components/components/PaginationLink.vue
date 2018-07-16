@@ -17,7 +17,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         href: {
@@ -30,7 +29,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

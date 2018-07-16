@@ -13,7 +13,6 @@
 </template>
 
 <script>
-
 export default {
     props: {
         hasFooter: {
@@ -22,7 +21,7 @@ export default {
         }
     }
 }
-
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+</style>

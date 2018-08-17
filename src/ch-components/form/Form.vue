@@ -21,13 +21,19 @@
 </template>
 
 <script>
-import ChNotification from '../elements/Notification.vue'
+import ChNotification from '../elements/Notification'
+
+import isEmpty from 'lodash/isEmpty'
 
 export default {
     props: {
         failureMsg: {
             type: String,
             default: 'Failure.'
+        },
+        method: {
+            type: String,
+            default: 'POST'
         },
         payload: {
             type: Object,
@@ -45,7 +51,6 @@ export default {
     data() {
         return {
             err: {},
-            isVisible: true,
             res: {}
         }
     },
@@ -54,24 +59,32 @@ export default {
     },
     computed: {
         isFailure() {
-            return this.res.status === 400 || this.res.status === 401
+            const { status } = this.err
+            return status > 400 && status < 499
         },
         isSuccessful() {
-            return this.res.status === 200 || this.res.status === 201
+            const { status } = this.res
+            return status > 200 && status < 299
+        },
+        isVisible() {
+            return !isEmpty(this.err) || !isEmpty(this.res)
         }
     },
     methods: {
         dismissNotification() {
-            this.isVisible = false
+            this.err = {}
+            this.res = {}
         },
         submitForm() {
-            this.$http
-                .post(this.url, this.payload)
+            this.$http(this.url, {
+                data: this.payload,
+                method: this.method
+            })
                 .then(res => {
                     this.res = res
                 })
                 .catch(err => {
-                    this.err = err
+                    this.err = err.response
                 })
         }
     }

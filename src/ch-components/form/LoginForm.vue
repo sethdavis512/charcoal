@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import ChBox from '../elements/Box.vue'
-import ChButton from '../elements/Button.vue'
-import ChForm from './Form.vue'
-import ChInput from './Input.vue'
+import ChBox from '../elements/Box'
+import ChButton from '../elements/Button'
+import ChForm from './Form'
+import ChInput from './Input'
 
 export default {
     components: {
@@ -67,7 +67,7 @@ export default {
 }
 
 @media (min-width: 768px) {
-    .login-form-container {
+    .login-form {
         margin: 3em 0;
     }
 }

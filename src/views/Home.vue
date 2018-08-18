@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import ChHero from '../ch-components/layout/Hero.vue'
+import ChHero from '../ch-components/layout/Hero'
 
 export default {
     data() {

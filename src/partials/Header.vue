@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import ChNavbar from '../ch-components/components/Navbar.vue'
+import ChNavbar from '../ch-components/components/Navbar'
 
 export default {
     components: {

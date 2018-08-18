@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Container from './Container.vue'
+import Container from './Container'
 
 export default {
     components: {

@@ -6,14 +6,15 @@ import axios from 'axios'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {
-    faHome,
+    faAngleDown,
     faBook,
+    faHome,
     faPencilAlt,
     faSignInAlt
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faHome, faBook, faPencilAlt, faSignInAlt)
+library.add(faAngleDown, faHome, faBook, faPencilAlt, faSignInAlt)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

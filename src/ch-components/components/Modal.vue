@@ -1,8 +1,5 @@
 <template>
-    <div
-        :class="{ 'is-active': isOpen }"
-        class="modal"
-    >
+    <div :class="`modal ${ isOpen ? 'is-active' : '' }`">
         <div
             @click="closeClick"
             class="modal-background"
@@ -11,12 +8,12 @@
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">
-                    <slot name="title"></slot>
+                    {{ title }}
                 </p>
                 <button
+                    @click="closeClick"
                     aria-label="close"
                     class="delete"
-                    @click="closeClick"
                 >
                 </button>
             </header>
@@ -35,6 +32,10 @@ export default {
     props: {
         isOpen: {
             type: Boolean
+        },
+        title: {
+            type: String,
+            default: 'Title'
         }
     },
     methods: {

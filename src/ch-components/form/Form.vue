@@ -23,7 +23,7 @@
 <script>
 import ChNotification from '../elements/Notification'
 
-import isEmpty from 'lodash/isEmpty'
+import { isEmpty } from 'lodash/isEmpty'
 
 export default {
     props: {

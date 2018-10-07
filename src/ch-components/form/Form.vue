@@ -2,17 +2,10 @@
     <div class="form-container">
         <ch-notification
             @dismiss="dismissNotification"
-            class="is-success"
-            v-show="isVisible && isSuccessful"
+            :class="isSuccessful ? 'is-success' : 'is-danger'"
+            v-show="isSuccessful || isFailure"
         >
-            {{ successMsg }}
-        </ch-notification>
-        <ch-notification
-            @dismiss="dismissNotification"
-            class="is-danger"
-            v-show="isVisible && isFailure"
-        >
-            {{ failureMsg }}
+            {{ isSuccessful ? successMsg : failureMsg }}
         </ch-notification>
         <form @submit.prevent="submitForm">
             <slot></slot>
@@ -37,7 +30,8 @@ export default {
         },
         payload: {
             type: Object,
-            required: true
+            required: true,
+            default: {}
         },
         successMsg: {
             type: String,
@@ -45,7 +39,8 @@ export default {
         },
         url: {
             type: String,
-            required: true
+            required: true,
+            default: 'http://your-api.com/'
         }
     },
     data() {
@@ -59,15 +54,16 @@ export default {
     },
     computed: {
         isFailure() {
-            const { status } = this.err
-            return status > 400 && status < 499
+            if (this.err) {
+                const { status } = this.err
+                return status > 400 && status < 499
+            }
+
+            return false
         },
         isSuccessful() {
             const { status } = this.res
             return status > 200 && status < 299
-        },
-        isVisible() {
-            return !isEmpty(this.err) || !isEmpty(this.res)
         }
     },
     methods: {

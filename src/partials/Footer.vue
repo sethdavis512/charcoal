@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import ChFooter from '../ch-components/layout/Footer'
+import ChFooter from '@/ch-components/layout/Footer.vue'
 
 export default {
     components: {

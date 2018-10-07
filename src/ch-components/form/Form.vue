@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import ChNotification from '../elements/Notification'
+import ChNotification from '@/ch-components/elements/Notification.vue'
 
 import { isEmpty } from 'lodash/isEmpty'
 

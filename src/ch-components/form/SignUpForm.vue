@@ -52,10 +52,10 @@
 </template>
 
 <script>
-import ChBox from '../elements/Box'
-import ChButton from '../elements/Button'
-import ChForm from './Form'
-import ChInput from './Input'
+import ChBox from '@/ch-components/elements/Box.vue'
+import ChButton from '@/ch-components/elements/Button.vue'
+import ChForm from '@/ch-components/form/Form.vue'
+import ChInput from '@/ch-components/form/Input.vue'
 
 export default {
     components: {

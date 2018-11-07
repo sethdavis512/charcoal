@@ -1,9 +1,9 @@
-# Card
+# Icon
 
 Component:
 
 ```js
-<ch-card>
+<ch-icon>
     {...}
-</ch-card>
+</ch-icon>
 ```

@@ -1,9 +1,9 @@
-# Card
+# Hero
 
 Component:
 
 ```js
-<ch-card>
+<ch-hero>
     {...}
-</ch-card>
+</ch-hero>
 ```

@@ -1,9 +1,9 @@
-# Card
+# Radio
 
 Component:
 
 ```js
-<ch-card>
+<ch-radio>
     {...}
-</ch-card>
+</ch-radio>
 ```

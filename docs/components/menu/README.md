@@ -1,9 +1,9 @@
-# Card
+# Menu
 
 Component:
 
 ```js
-<ch-card>
+<ch-menu>
     {...}
-</ch-card>
+</ch-menu>
 ```

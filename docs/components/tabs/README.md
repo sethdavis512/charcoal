@@ -1,9 +1,9 @@
-# Card
+# Tabs
 
 Component:
 
 ```js
-<ch-card>
+<ch-tabs>
     {...}
-</ch-card>
+</ch-tabs>
 ```

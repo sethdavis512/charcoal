@@ -1,9 +1,9 @@
-# Card
+# Image
 
 Component:
 
 ```js
-<ch-card>
+<ch-image>
     {...}
-</ch-card>
+</ch-image>
 ```

@@ -19,22 +19,71 @@ module.exports = {
             {
                 title: 'Components',
                 collapsable: true,
-                children: ['/components/breadcrumb/', '/components/card/']
+                children: [
+                    '/components/breadcrumb/',
+                    '/components/card/',
+                    '/components/crumb/',
+                    '/components/dropdown/',
+                    '/components/menu/',
+                    '/components/menu-label/',
+                    '/components/menu-list/',
+                    '/components/message/',
+                    '/components/modal/',
+                    '/components/navbar/',
+                    '/components/pagination/',
+                    '/components/pagination-link/',
+                    '/components/panel/',
+                    '/components/panel-block/',
+                    '/components/panel-icon/',
+                    '/components/panel-link/',
+                    '/components/tab/',
+                    '/components/tabs/'
+                ]
             },
             {
                 title: 'Elements',
                 collapsable: true,
-                children: ['/elements/box/', '/elements/button/']
+                children: [
+                    '/elements/box/',
+                    '/elements/button/',
+                    '/elements/box/',
+                    '/elements/button/',
+                    '/elements/button-group/',
+                    '/elements/content/',
+                    '/elements/icon/',
+                    '/elements/image/',
+                    '/elements/notification/',
+                    '/elements/progress/',
+                    '/elements/table/',
+                    '/elements/tag/',
+                    '/elements/tags/'
+                ]
             },
             {
                 title: 'Form',
                 collapsable: true,
-                children: ['/form/checkbox/']
+                children: [
+                    '/form/checkbox/',
+                    '/form/input/',
+                    '/form/radio/',
+                    '/form/select/',
+                    '/form/textarea/'
+                ]
             },
             {
                 title: 'Layout',
                 collapsable: true,
-                children: ['/layout/container/']
+                children: [
+                    '/layout/container/',
+                    '/layout/footer/',
+                    '/layout/hero/',
+                    '/layout/level/',
+                    '/layout/media-object/',
+                    '/layout/section/',
+                    '/layout/tile-ancestor/',
+                    '/layout/tile-child/',
+                    '/layout/tile-parent/'
+                ]
             }
         ]
     }

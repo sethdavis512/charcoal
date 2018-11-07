@@ -1,9 +1,9 @@
-# Card
+# Level
 
 Component:
 
 ```js
-<ch-card>
+<ch-level>
     {...}
-</ch-card>
+</ch-level>
 ```

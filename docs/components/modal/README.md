@@ -1,9 +1,9 @@
-# Card
+# Modal
 
 Component:
 
 ```js
-<ch-card>
+<ch-modal>
     {...}
-</ch-card>
+</ch-modal>
 ```

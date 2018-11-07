@@ -1,9 +1,9 @@
-# Card
+# Input
 
 Component:
 
 ```js
-<ch-card>
+<ch-input>
     {...}
-</ch-card>
+</ch-input>
 ```

@@ -1,3 +1,9 @@
 # Breadcrumb
 
-I am the breadcrumb.
+Component:
+
+```js
+<ch-breadcrumb>
+    {...}
+</ch-breadcrumb>
+```

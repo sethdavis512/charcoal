@@ -1,3 +1,9 @@
 # Column
 
-I am the column page.
+Component:
+
+```js
+<ch-column>
+    {...}
+</ch-column>
+```

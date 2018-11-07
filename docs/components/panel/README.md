@@ -1,9 +1,9 @@
-# Card
+# Panel
 
 Component:
 
 ```js
-<ch-card>
+<ch-panel>
     {...}
-</ch-card>
+</ch-panel>
 ```

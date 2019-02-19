@@ -3,7 +3,7 @@
         <router-link
             class="navbar-item"
             slot="navbar-brand"
-            to="/"
+            to="/home"
         >
             <font-awesome-icon icon="home" />
             Home
@@ -21,29 +21,59 @@
             active-class="is-active"
             class="navbar-item"
             slot="navbar-end"
-            to="/sign-up"
+            to="/login"
+            v-show="!email"
         >
-            <font-awesome-icon icon="pencil-alt" />
-            Sign Up
+            <font-awesome-icon icon="sign-in-alt" />
+            Login
         </router-link>
         <router-link
             active-class="is-active"
             class="navbar-item"
             slot="navbar-end"
-            to="/login"
+            to="/profile"
+            v-if="email"
         >
-            <font-awesome-icon icon="sign-in-alt" />
-            Login
+            <font-awesome-icon icon="user-circle" />
+            {{ email | usernameify }}
         </router-link>
+        <a
+            @click="handleLogout"
+            class="navbar-item"
+            slot="navbar-end"
+        >
+            Logout
+        </a>
     </ch-navbar>
 </template>
 
 <script>
-import ChNavbar from '@/ch-components/components/Navbar.vue'
+import firebase from 'firebase';
+import { mapGetters, mapActions } from 'vuex';
+import ChNavbar from '../ch-components/components/Navbar.vue'
 
 export default {
     components: {
         ChNavbar
+    },
+    computed: {
+        ...mapGetters(['email'])
+    },
+    methods: {
+        ...mapActions(['clearUser']),
+        handleLogout() {
+            firebase.auth().signOut()
+                .then(() => {
+                    this.clearUser();
+                    this.$router.push('login');
+                })
+                .catch(err => console.log(err));
+        }
+    },
+    filters: {
+        usernameify(email) {
+            return email.split('@')[0];
+        }
     }
 }
 </script>

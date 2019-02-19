@@ -1,6 +1,7 @@
 module.exports = {
     title: 'Charcoal Docs',
     description: 'Fuel for Web Apps',
+    port: 8081,
     themeConfig: {
         nav: [
             { text: 'Home', link: '/' },

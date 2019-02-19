@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
@@ -24,7 +26,6 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "vue-template-compiler": "^2.5.17",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-plugin-unit-jest": "^3.4.0",
@@ -34,6 +35,8 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0"
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.5.17",
+    "vuepress": "^0.14.9"
   }
 }

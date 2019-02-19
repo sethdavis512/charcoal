@@ -4,41 +4,19 @@
             Sign Up
         </h1>
         <ch-box>
-            <ch-form
-                :payload="user"
-                :url="resource"
-            >
-                <ch-input
-                    label="First Name"
-                    placeholder="Enter your first name"
-                    v-model="user.firstName"
-                >
-                </ch-input>
-                <ch-input
-                    label="Last Name"
-                    placeholder="Enter your last name"
-                    v-model="user.lastName"
-                >
-                </ch-input>
+            <form @submit.prevent="handleFormSubmit">
                 <ch-input
                     label="Email"
                     placeholder="Enter your email"
                     type="email"
-                    v-model="user.email"
+                    v-model="email"
                 >
                 </ch-input>
                 <ch-input
                     label="Password"
                     placeholder="Enter your password"
                     type="password"
-                    v-model="user.password"
-                >
-                </ch-input>
-                <ch-input
-                    label="Confirm Password"
-                    placeholder="Confirm your password"
-                    type="password"
-                    v-model="user.confirmPassword"
+                    v-model="password"
                 >
                 </ch-input>
                 <ch-button
@@ -46,34 +24,39 @@
                     type="submit"
                 >
                 </ch-button>
-            </ch-form>
+            </form>
+            <hr>
+            <p>
+                Already a member? <router-link to="/login">Login</router-link>
+            </p>
         </ch-box>
     </div>
 </template>
 
 <script>
+import firebase from 'firebase';
+
 import ChBox from '../elements/Box.vue'
 import ChButton from '../elements/Button.vue'
-import ChForm from './Form.vue'
 import ChInput from './Input.vue'
 
 export default {
     components: {
         ChBox,
         ChButton,
-        ChForm,
         ChInput
     },
     data() {
         return {
-            resource: 'http://www.your-url.com/',
-            user: {
-                firstName: '',
-                lastName: '',
-                email: '',
-                password: '',
-                confirmPassword: ''
-            }
+            email: '',
+            password: ''
+        }
+    },
+    methods: {
+        handleFormSubmit() {
+            firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(this.email, this.password)
+                .then((res) => this.$router.push('login'))
+                .catch(err => console.log(err));
         }
     }
 }

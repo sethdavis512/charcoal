@@ -55,7 +55,7 @@ export default {
     methods: {
         handleFormSubmit() {
             firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-                .then((res) => this.$router.push('login'))
+                .then(res => this.$router.push('login'))
                 .catch(err => console.log(err));
         }
     }

@@ -49,8 +49,8 @@ export default {
     },
     data() {
         return {
-            email: 'first@mail.com',
-            password: 'asdfasdf'
+            email: '',
+            password: ''
         }
     },
     methods: {

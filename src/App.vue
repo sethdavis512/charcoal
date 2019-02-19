@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import ChHeader from './partials/Header.vue'
-import ChFooter from './partials/Footer.vue'
+import ChHeader from './partials/Header'
+import ChFooter from './partials/Footer'
 
 export default {
     components: {

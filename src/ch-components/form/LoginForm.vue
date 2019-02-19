@@ -4,22 +4,19 @@
             Login
         </h1>
         <ch-box>
-            <ch-form
-                :payload="user"
-                :url="resource"
-            >
+            <form @submit.prevent="handleFormSubmit">
                 <ch-input
                     label="Email"
                     placeholder="Enter your email"
                     type="email"
-                    v-model="user.email"
+                    v-model="email"
                 >
                 </ch-input>
                 <ch-input
                     label="Password"
                     placeholder="Enter your password"
                     type="password"
-                    v-model="user.password"
+                    v-model="password"
                 >
                 </ch-input>
                 <ch-button
@@ -27,7 +24,7 @@
                     type="submit"
                 >
                 </ch-button>
-            </ch-form>
+            </form>
             <hr>
             <p>
                 Not a member? <router-link to="/sign-up">Sign Up</router-link>
@@ -37,25 +34,34 @@
 </template>
 
 <script>
+import firebase from 'firebase';
+import { mapActions } from 'vuex';
+
 import ChBox from '../elements/Box.vue'
 import ChButton from '../elements/Button.vue'
-import ChForm from './Form.vue'
 import ChInput from './Input.vue'
 
 export default {
     components: {
         ChBox,
         ChButton,
-        ChForm,
         ChInput
     },
     data() {
         return {
-            resource: 'http://www.your-url.com/',
-            user: {
-                email: '',
-                password: ''
-            }
+            email: '',
+            password: ''
+        }
+    },
+    methods: {
+        ...mapActions(['setUserEmail']),
+        handleFormSubmit() {
+            firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+                .then(res => {
+                    this.setUserEmail(res.user.email);
+                    this.$router.push('home');
+                })
+                .catch(err => console.log(err));
         }
     }
 }
@@ -67,7 +73,7 @@ export default {
 }
 
 @media (min-width: 768px) {
-    .login-form-container {
+    .login-form {
         margin: 3em 0;
     }
 }

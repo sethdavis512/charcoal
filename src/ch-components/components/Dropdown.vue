@@ -1,30 +1,22 @@
 <template>
-    <div
-        :class="{ 'is-active': isOpen }"
-        class="dropdown"
-    >
+    <div :class="`dropdown ${isOpen ? 'is-active' : ''}`">
         <div class="dropdown-trigger">
             <button
-                @click="openDropdown"
+                @click="isOpen = !isOpen"
                 aria-controls="dropdown-menu"
                 aria-haspopup="true"
                 class="button"
             >
                 <span>
-                    <slot name="name"></slot>
+                    {{ text }}
                 </span>
                 <span class="icon is-small">
-                    <i
-                        aria-hidden="true"
-                        class="fa fa-angle-down"
-                    >
-                    </i>
+                    <font-awesome-icon icon="angle-down" />
                 </span>
             </button>
         </div>
         <div
             class="dropdown-menu"
-            id="dropdown-menu"
             role="menu"
         >
             <div class="dropdown-content">
@@ -37,14 +29,14 @@
 <script>
 export default {
     props: {
-        isOpen: {
-            type: Boolean,
-            default: false
+        text: {
+            type: String,
+            default: 'Button'
         }
     },
-    methods: {
-        openDropdown() {
-            this.$emit('openDropdown')
+    data() {
+        return {
+            isOpen: false
         }
     }
 }

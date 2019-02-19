@@ -2,17 +2,10 @@
     <div class="form-container">
         <ch-notification
             @dismiss="dismissNotification"
-            class="is-success"
-            v-show="isVisible && isSuccessful"
+            :class="isSuccessful ? 'is-success' : 'is-danger'"
+            v-show="isSuccessful || isFailure"
         >
-            {{ successMsg }}
-        </ch-notification>
-        <ch-notification
-            @dismiss="dismissNotification"
-            class="is-danger"
-            v-show="isVisible && isFailure"
-        >
-            {{ failureMsg }}
+            {{ isSuccessful ? successMsg : failureMsg }}
         </ch-notification>
         <form @submit.prevent="submitForm">
             <slot></slot>
@@ -21,7 +14,9 @@
 </template>
 
 <script>
-import ChNotification from '../elements/Notification.vue'
+import ChNotification from '@/ch-components/elements/Notification.vue'
+
+import { isEmpty } from 'lodash/isEmpty'
 
 export default {
     props: {
@@ -29,9 +24,14 @@ export default {
             type: String,
             default: 'Failure.'
         },
+        method: {
+            type: String,
+            default: 'POST'
+        },
         payload: {
             type: Object,
-            required: true
+            required: true,
+            default: {}
         },
         successMsg: {
             type: String,
@@ -39,13 +39,13 @@ export default {
         },
         url: {
             type: String,
-            required: true
+            required: true,
+            default: 'http://your-api.com/'
         }
     },
     data() {
         return {
             err: {},
-            isVisible: true,
             res: {}
         }
     },
@@ -54,24 +54,33 @@ export default {
     },
     computed: {
         isFailure() {
-            return this.res.status === 400 || this.res.status === 401
+            if (this.err) {
+                const { status } = this.err
+                return status > 400 && status < 499
+            }
+
+            return false
         },
         isSuccessful() {
-            return this.res.status === 200 || this.res.status === 201
+            const { status } = this.res
+            return status > 200 && status < 299
         }
     },
     methods: {
         dismissNotification() {
-            this.isVisible = false
+            this.err = {}
+            this.res = {}
         },
         submitForm() {
-            this.$http
-                .post(this.url, this.payload)
+            this.$http(this.url, {
+                data: this.payload,
+                method: this.method
+            })
                 .then(res => {
                     this.res = res
                 })
                 .catch(err => {
-                    this.err = err
+                    this.err = err.response
                 })
         }
     }

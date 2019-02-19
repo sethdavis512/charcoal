@@ -1,25 +1,23 @@
-// STATE ===============
+import { DECREMENT, INCREMENT } from './mutationTypes'
+
 const state = {
     count: 0
 }
 
-// GETTERS ===============
 const getters = {
     count: state => state.count
 }
 
-// ACTIONS ===============
 const actions = {
-    increment: ({ commit }) => commit('increment'),
-    decrement: ({ commit }) => commit('decrement')
+    increment: ({ commit }) => commit(INCREMENT),
+    decrement: ({ commit }) => commit(DECREMENT)
 }
 
-// MUTATIONS ===============
 const mutations = {
-    increment(state) {
+    [INCREMENT](state) {
         state.count++
     },
-    decrement(state) {
+    [DECREMENT](state) {
         state.count--
     }
 }

@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import ChColumns from '../ch-components/columns/Columns.vue'
-import ChColumn from '../ch-components/columns/Column.vue'
-import ChLoginForm from '../ch-components/form/LoginForm.vue'
-import ChSection from '../ch-components/layout/Section.vue'
+import ChColumns from '@/ch-components/columns/Columns.vue'
+import ChColumn from '@/ch-components/columns/Column.vue'
+import ChLoginForm from '@/ch-components/form/LoginForm.vue'
+import ChSection from '@/ch-components/layout/Section.vue'
 
 export default {
     components: {

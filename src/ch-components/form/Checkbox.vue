@@ -18,8 +18,8 @@
 <script>
 export default {
     model: {
-        prop: 'modelValue',
-        event: 'change'
+        event: 'change',
+        prop: 'modelValue'
     },
     props: {
         falseValue: {
@@ -50,10 +50,10 @@ export default {
     },
     methods: {
         handleChange(e) {
-            let checked = e.target.checked
+            const checked = e.target.checked
 
             if (this.modelValue instanceof Array) {
-                let modelArr = [...this.modelValue]
+                const modelArr = [...this.modelValue]
 
                 if (checked) {
                     modelArr.push(this.value)

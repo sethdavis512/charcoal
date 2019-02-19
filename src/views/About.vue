@@ -67,9 +67,9 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 
-import ChButton from '../ch-components/elements/Button.vue'
-import ChButtonGroup from '../ch-components/elements/ButtonGroup.vue'
-import ChSection from '../ch-components/layout/Section.vue'
+import ChButton from '@/ch-components/elements/Button.vue'
+import ChButtonGroup from '@/ch-components/elements/ButtonGroup.vue'
+import ChSection from '@/ch-components/layout/Section.vue'
 
 export default {
     components: {
